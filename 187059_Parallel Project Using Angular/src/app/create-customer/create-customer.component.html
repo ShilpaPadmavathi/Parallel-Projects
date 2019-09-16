@@ -1,0 +1,39 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+</head>
+
+<div class="container">
+    <form name="myForm" #upd="ngForm" (ngSubmit)="add(upd.value)" class="was-validated">
+        <div class="form-group">
+            <label for="cname">Name:</label>
+            <input type="text" class="form-control" placeholder="Enter Your Full name" id="cname" name="cname" ngModel required> 
+            <div class="invalid-feedback">Please enter your name</div> 
+        </div>
+        <div class="form-group">
+            <label for="cphone">Mobile No:</label>
+            <input type="text" class="form-control" placeholder="Enter your phone number" name="cphone" ngModel required>  
+            <div class="invalid-feedback">Please enter your phone number</div>
+        </div>
+        <div class="form-group">
+            <label for="cpassword">Password:</label>
+            <input type="password" class="form-control" placeholder="Enter the password" name="cpassword" ngModel required>  
+            <div class="invalid-feedback">Please enter your password</div>
+        </div>
+        <div class="form-group">
+            <label for="ccity">Location:</label>
+            <input type="text" class="form-control" placeholder="Enter your location" name="ccity" ngModel required>  
+            <div class="invalid-feedback">Please enter your location</div>
+        </div>
+        <input type="submit" [disabled]="upd.invalid" id="submitbutton" class="btn btn-warning" value="Create"/>
+    </form>
+</div>
+
+<form align="center" *ngIf="createdFlag;">
+    <h5>Account is Created and WELCOME!!!</h5 >
+</form>

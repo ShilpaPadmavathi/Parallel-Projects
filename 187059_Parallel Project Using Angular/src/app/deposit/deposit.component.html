@@ -1,0 +1,12 @@
+<br>
+<div class="container">
+  <h5>Deposit amount</h5>
+  <form name="myForm" #upd="ngForm" (ngSubmit)="depositeAmount(upd.value)" class="was-validated">
+    <div class="form-group">
+      <label for="cbalance">Enter the deposit amount:</label>
+        <input type="text" class="form-control" placeholder="Enter your deposit amount" id="cbalance" name="cbalance" ngModel required> 
+        <div class="invalid-feedback">Please enter your deposit amount</div>
+    </div>
+    <input type="submit" [disabled]="upd.invalid" id="submitbutton" class="btn btn-warning" value="Add Amount"/>
+  </form>    
+</div>

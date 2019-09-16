@@ -1,0 +1,19 @@
+[
+    {
+    "caccount":"111",
+    "cname":"Balavignesh.P",
+    "cphone":"8807171248",
+    "cpassword":"bala",
+    "ccity":"Tiruppur",
+    "cbalance":"3000"
+    },
+
+    {
+    "caccount":"222",
+        "cname":"Vignesh.P",
+        "cphone":"9487165163",
+        "cpassword":"vignesh",
+        "ccity":"Coimbatore",
+        "cbalance":"3000"
+        }
+    ]

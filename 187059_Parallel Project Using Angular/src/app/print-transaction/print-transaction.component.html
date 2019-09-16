@@ -1,0 +1,29 @@
+<br><br><br><br>
+<div class="container" align="center">
+  <form #upd="ngForm" (ngSubmit)="miniStatement(upd.value)"><br>
+    <h5>Print Transaction</h5><hr>           
+    <input type="submit" class="btn btn-warning" value="Show"/>      
+  </form>
+</div><hr><br><br><br>
+<div class="container"> 
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Transaction ID</th>
+        <th>Sender account No.</th>
+        <th>Receiver account No.</th>
+        <th>Transfer amount</th>
+        <th>Transaction type</th>
+      </tr>
+    </thead>      
+    <tbody>
+      <tr *ngFor="let det of transactions">
+        <td>{{det.tid}}</td>
+        <td>{{det.taccount_sender}}</td>
+        <td>{{det.taccount_reciver}}</td>
+        <td>{{det.tamount}}</td>
+        <td>{{det.ttype}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,12 @@
+<br><br><br><br>
+<div class="container">
+  <h5>Withdraw amount</h5>
+  <form name="myForm" #upd="ngForm" (ngSubmit)="withdrawAmount(upd.value)" class="was-validated">
+    <div class="form-group">
+      <label for="cbalance">Enter the withdraw amount:</label>
+      <input type="text" class="form-control" placeholder="Enter the withdraw amount" id="cbalance" name="cbalance" ngModel required> 
+      <div class="invalid-feedback">Please the enter withdraw amount</div> 
+    </div>
+    <input type="submit" [disabled]="upd.invalid" id="submitbutton" class="btn btn-warning" value="Withdraw-Amount"/>
+  </form>
+</div>

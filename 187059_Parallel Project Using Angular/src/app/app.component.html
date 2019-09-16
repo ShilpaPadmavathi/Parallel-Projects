@@ -1,0 +1,53 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<div *ngIf="message!='loginhai'"  style="background-color: powderblue"><br>
+  <div style="text-align:center">
+    <h1 align="center" style="color: seagreen;size: 25cm"><marquee 
+      direction="left" behavior="alternate">PAYMENT APPLICATION PORTAL</marquee></h1>
+  </div><hr>
+  <h5 align="center">
+    <a routerLink="app-create-customer" style="margin: 20px;color:slateblue"><b>Register</b></a>
+    <a routerLink="app-login" style="margin: 20px;color: slateblue"><b>Login</b></a>
+  </h5><hr>
+</div>
+
+<br><br>
+<div *ngIf="message=='loginhai'">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <a class="navbar-brand" routerLink="app-homepage">Payment Wallet</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="app-show-balance">View Balance</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="app-deposit">Deposit Amount</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="app-withdraw">Withdraw Amount</a>
+          </li>    
+          <li class="nav-item">
+            <a class="nav-link" routerLink="app-fund-transfer">Transfer Funds</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="app-print-transaction">Print Your Transactions</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="router-outlet">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</div>
+
+<router-outlet></router-outlet>

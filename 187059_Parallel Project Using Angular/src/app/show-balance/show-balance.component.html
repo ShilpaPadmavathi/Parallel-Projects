@@ -1,0 +1,7 @@
+<br><br><br><br>
+<div class="container" align="center">
+    <form #upd="ngForm" (ngSubmit)="showBalance(upd.value)"> 
+        <input type="submit" class="btn btn-warning" value="View balance"/>
+    </form><br><hr>
+    <h5 *ngIf="!isShowBalance">Current balance: {{cbalance}}</h5>
+</div>
